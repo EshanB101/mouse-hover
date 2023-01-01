@@ -71,6 +71,17 @@
         #confetti-wrapper {
             overflow: hidden !important;
         }
+
+        #showDialog {
+            margin: 16% auto;
+            padding: 32px;
+        }
+        dialog::backdrop {
+            background: rgba(0,0,0,0.84);
+        }
+        .closeicon:hover {
+            transform: scale(1.1);
+        }
     </style>
 <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 </head>
@@ -85,31 +96,45 @@
             <img src="https://media.tenor.com/_W2FjRBFfkcAAAAC/cat-please.gif" alt="cute cat image" style="border-radius: 8px;"/>
         </div>
         <div style="margin: 24px 197px 64px 32px;">
-            <button class="yes-btn" onclick="showConfetti()" style="margin-right: 24px;">Yes</button>
+            <button id="showBtn" class="yes-btn" onclick="showConfetti()" style="margin-right: 24px;">Yes</button>
             <button class="no-btn" onmouseover="crazyButton()" id="btn">No</button>
         </div>
         <div id="confetti-wrapper" style="display: none"></div>
         <div id="celebrate" style="display: none">
             <img style="position: absolute;left: 0; top:30%;" src="https://media.tenor.com/qg8K8VOmzJwAAAAi/party-popper-confetti.gif" alt="celebrate"/>
             <img style="position: absolute;right: 0; top:30%; transform: scaleX(-1);" src="https://media.tenor.com/qg8K8VOmzJwAAAAi/party-popper-confetti.gif" alt="celebrate"/>
-            <img style="position: absolute;right: 40%; bottom:0;" src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
-
+            <img style="position: absolute;right: 0; bottom:0;" src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
         </div>
     </div>
+    <dialog id="showDialog">
+        <div style="display: flex;justify-content: end">
+            <p class="closeicon" onclick="closeDialog()" style="cursor:pointer; font-size: 30px; text-align: right; display: inline-block">X</p>
+        </div>
+        <div>
+            <h1 style="text-align: center">YES?! </br>Thank you & love you too</h1>
+            <img src="https://media.tenor.com/uPqAeCeFDkkAAAAi/%E5%B9%B8%E7%A6%8F%E7%88%B1%E5%BF%83-happy.gif" alt="celebrate"/>
+            <img src="https://media.tenor.com/dLyUHPL976UAAAAi/love-in-love.gif" alt="celebrate"/>
+        </div>
+    </dialog>
 </body>
 <script>
     let btn = document.getElementById('btn');
+    let dialog = document.getElementById('showDialog');
     btn.style.position = "absolute";
 
     function crazyButton() {
         btn.style.left= (Math.random()*90)+"%";
         btn.style.top= (Math.random()*90)+"%";
     }
+    function closeDialog() {
+        dialog.close();
+    }
     function showConfetti(){
+        dialog.showModal();
         document.getElementById('confetti-wrapper').style.display = "block";
         document.getElementById('celebrate').style.display = "block";
-        alert('Yay! Thank you & love you too');
     }
+
 
     //conffetti
     for(i=0; i<100; i++) {
