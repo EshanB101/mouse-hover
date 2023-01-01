@@ -83,10 +83,14 @@
             transform: scale(1.1);
         }
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/office/512/hearts.png">
+
 </head>
 <body>
+    <!--THIS FOR COFETTI-->
     <div id="confetti-wrapper" style="display: none"></div>
+    <!--MAIN CONTENT-->
     <div class="container">
         <div style="display: flex; align-items: center">
             <h2 style="font-size:45px; color: white;">Dear Crush</h2>
@@ -106,7 +110,9 @@
             <img style="position: absolute;right: 0; bottom:0;z-index: -2" src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
             <img style="position: absolute;left: 0; bottom:0;z-index: -2; transform: scaleX(-1);" src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
         </div>
+        <b style="color:white;font-family: sans-serif">-Sincerely, Eshan</b>
     </div>
+    <!--DIALOG CONTENT-->
     <dialog id="showDialog">
         <div style="display: flex;justify-content: end">
             <p class="closeicon" onclick="closeDialog()" style="cursor:pointer; font-size: 30px; text-align: right; display: inline-block">X</p>
@@ -117,6 +123,7 @@
             <img src="https://media.tenor.com/dLyUHPL976UAAAAi/love-in-love.gif" alt="celebrate"/>
         </div>
     </dialog>
+
 </body>
 <script>
     let btn = document.getElementById('btn');
