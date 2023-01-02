@@ -5,10 +5,12 @@
     font-family: 'Caveat', cursive;
 }
 body{
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    /*background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);*/
+    background: linear-gradient(-45deg, #a18cd1, #fbc2eb, #a18cd1, #fbc2eb);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
     height: 100vh;
+    overflow: hidden;
 }
 
 @keyframes gradient {
@@ -23,18 +25,13 @@ body{
     }
 }
 
-
-
-html {
-    overflow: hidden;
-}
 button {
     padding: 24px 50px;
     border-radius: 8px;
     cursor: pointer;
     outline: none;
     font-size: 24px;
-    border: 3px solid white;
+    border: none;
 }
 .container {
     width: 100%;
@@ -44,11 +41,7 @@ button {
     justify-content: center;
     align-items: center;
 }
-.yes-btn {
-    background: #B683EF;
-    color: white;
-    font-weight: bold;
-}
+
 .no-btn {
     background: #DA291C;
     color: white;
@@ -98,4 +91,73 @@ button {
 
 .closeicon:hover {
     transform: scale(1.1);
+}
+
+.yes-btn {
+    color: white;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
+}
+
+.yes-btn:hover {
+    color: #fe2d7c;
+}
+.yes-btn:hover .heart, .yes-btn:hover .heart-outer {
+    transform: translate3D(-50%, -50%, 0) rotate(-45deg) scale(12);
+}
+.yes-btn-text {
+    color: #fe2d7c;
+    position: relative;
+    z-index: 10;
+}
+.heart, .heart-outer {
+    position: absolute;
+    left: 50%;
+    transform: translate3D(-50%, -50%, 0) rotate(-45deg) scale(0);
+    z-index: 5;
+    transition: transform 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
+}
+.heart:before, .heart-outer:before, .heart:after, .heart-outer:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.heart:before, .heart-outer:before {
+    left: 0;
+}
+.heart {
+    background-color: #fff;
+    top: 60%;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    color: #fe2d7c;
+}
+.heart:before, .heart:after {
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+}
+.heart:before {
+    top: -10px;
+}
+.heart-outer {
+    width: 30px;
+    height: 30px;
+    background-color: #ffc0d8;
+    z-index: 1;
+    top: 62%;
+}
+.heart-outer:before, .heart-outer:after {
+    width: 30px;
+    height: 30px;
+    background-color: #ffc0d8;
+}
+.heart-outer:before {
+    top: -15px;
 }
