@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Caveat', cursive;
 }
+
 body{
     background: linear-gradient(-45deg, #646ff8, #7f73f6, #a67df1, #fbc2eb);
     background-size: 400% 400%;
@@ -32,6 +33,7 @@ button {
     font-size: 24px;
     border: none;
 }
+
 .container {
     width: 100%;
     height: 100vh;
@@ -310,4 +312,9 @@ dialog::backdrop {
 
 .action-button {
     margin: 24px 197px 64px 32px;
+}
+
+.please-cat {
+    height: 12vh;
+    border-radius: 8px;
 }
