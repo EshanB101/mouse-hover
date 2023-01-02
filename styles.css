@@ -5,8 +5,7 @@
     font-family: 'Caveat', cursive;
 }
 body{
-    /*background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);*/
-    background: linear-gradient(-45deg, #a18cd1, #fbc2eb, #a18cd1, #fbc2eb);
+    background: linear-gradient(-45deg, #646ff8, #7f73f6, #a67df1, #fbc2eb);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
     height: 100vh;
@@ -40,6 +39,31 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container-header {
+    display: flex;
+    align-items: center
+}
+
+.container-header h2 {
+    font-size: 6.2vh;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 7.5vh;
+    margin-bottom: 24px;
+}
+
+.container h3 {
+  font-family: sans-serif;
 }
 
 .no-btn {
@@ -79,7 +103,7 @@ button {
 #showDialog {
     margin: 10% auto;
     padding: 32px;
-
+    width:400px;
     /* css for Glassmorphism   */
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -89,8 +113,35 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+dialog::backdrop {
+    background: rgba(0,0,0,0.30);
+}
+
+.closeicon {
+    cursor:pointer;
+    font-size: 30px;
+    text-align: right;
+    display: inline-block
+}
+
 .closeicon:hover {
     transform: scale(1.1);
+}
+
+.dialog-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialog-title h1 {
+ color:red;
+}
+
+.dialog-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .yes-btn {
@@ -102,19 +153,23 @@ button {
     -webkit-backdrop-filter: blur(4px);
     overflow: hidden;
     transition: all 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
+    margin-right: 24px;
 }
 
 .yes-btn:hover {
     color: #fe2d7c;
 }
+
 .yes-btn:hover .heart, .yes-btn:hover .heart-outer {
     transform: translate3D(-50%, -50%, 0) rotate(-45deg) scale(12);
 }
+
 .yes-btn-text {
     color: #fe2d7c;
     position: relative;
     z-index: 10;
 }
+
 .heart, .heart-outer {
     position: absolute;
     left: 50%;
@@ -122,14 +177,17 @@ button {
     z-index: 5;
     transition: transform 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
 }
+
 .heart:before, .heart-outer:before, .heart:after, .heart-outer:after {
     content: '';
     position: absolute;
     border-radius: 50%;
 }
+
 .heart:before, .heart-outer:before {
     left: 0;
 }
+
 .heart {
     background-color: #fff;
     top: 60%;
@@ -138,14 +196,17 @@ button {
     width: 30px;
     color: #fe2d7c;
 }
+
 .heart:before, .heart:after {
     background-color: #fff;
     height: 30px;
     width: 30px;
 }
+
 .heart:before {
     top: -10px;
 }
+
 .heart-outer {
     width: 30px;
     height: 30px;
@@ -153,11 +214,100 @@ button {
     z-index: 1;
     top: 62%;
 }
+
 .heart-outer:before, .heart-outer:after {
     width: 30px;
     height: 30px;
     background-color: #ffc0d8;
 }
+
 .heart-outer:before {
     top: -15px;
+}
+
+.display-none {
+    display: none
+}
+
+.text-center {
+    text-align: center;
+}
+
+.celebrate img {
+    position: absolute;
+    z-index: -2;
+}
+
+.celebrate img:first-child {
+    left: 0;
+    top:10%;
+}
+
+.celebrate img:last-child {
+    right: 0;
+    bottom:0;
+}
+
+.color-white {
+    color: white;
+}
+
+.heartbeats {
+    top: 8%;
+    left: 8%;
+    background-color: #ff4f20;
+    height: 30px;
+    transform: rotate(-45deg);
+    width: 30px;
+    display: block;
+    animation-name: beat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.heartbeats:before, .heartbeats:after {
+    content: "";
+    background-color: #ff4f20;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.heartbeats:before {
+    top: -16px;
+    left: 0;
+}
+
+.heartbeats:after {
+    left: 16px;
+    top: 0;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    40% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(0.8) rotate(-45deg);
+    }
+    55% {
+        transform: scale(0.9) rotate(-45deg);
+    }
+    60% {
+        transform: scale(0.7) rotate(-45deg);
+    }
+}
+
+.eshan-img {
+    height:300px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+.action-button {
+    margin: 24px 197px 64px 32px;
 }

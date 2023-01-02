@@ -10,41 +10,47 @@
 </head>
 <body>
     <!--THIS FOR COFETTI-->
-    <div id="confetti-wrapper" style="display: none"></div>
+    <div class="confetti-wrapper display-none"></div>
     <!--MAIN CONTENT-->
     <div class="container">
-        <div style="display: flex; align-items: center">
-            <h2 class="head-1" style="font-size: 6.5vh; color: white;">Dear Crush</h2>
+        <div class="container-header">
+            <h2 class="color-white">Dear Crush</h2>
             <img width="150" height="150" src="https://media.tenor.com/cofRHcGGOfoAAAAi/shy-cute.gif" alt="cute"/>
         </div>
-        <div style="display: flex; flex-direction: column; justify-content: center;align-items: center; ">
-            <h1 style="font-size: 7.5vh;text-align: center; color: white; margin-bottom: 24px;">Will you go out with me?</h1>
+        <div class="container-content">
+            <h1 class="color-white">Will you go out with me?</h1>
             <img class="please-cat" src="https://media.tenor.com/_W2FjRBFfkcAAAAC/cat-please.gif" alt="cute cat image" style="height: 32vh;border-radius: 8px;"/>
         </div>
-        <div style="margin: 24px 197px 64px 32px;">
-
-            <button id="showBtn" class="yes-btn" onclick="showConfetti()" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;"><span class="heart"></span>
+        <div class="action-button">
+            <button id="showBtn" class="yes-btn" onclick="showConfetti()">
+                <span class="heart"></span>
                 <span class="heart-outer"></span>
-                <span class="yes-btn-text">Yes</span></button>
+                <span class="yes-btn-text">Yes</span>
+            </button>
             <button class="no-btn" onmouseover="crazyButton()" id="btn">No</button>
         </div>
-        <div id="celebrate" style="display: none">
-            <img style="position: absolute;left: 0; top:15%; z-index: -2" src="https://media.tenor.com/qg8K8VOmzJwAAAAi/party-popper-confetti.gif" alt="celebrate"/>
-            <img style="position: absolute;right: 0; top:15%; transform: scaleX(-1); z-index: -2" src="https://media.tenor.com/qg8K8VOmzJwAAAAi/party-popper-confetti.gif" alt="celebrate"/>
-            <img style="position: absolute;right: 0; bottom:0;z-index: -2" src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
-            <img style="position: absolute;left: 0; bottom:0;z-index: -2; transform: scaleX(-1);" src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
+        <div class="display-none celebrate">
+            <img src="https://media.tenor.com/qg8K8VOmzJwAAAAi/party-popper-confetti.gif" alt="celebrate"/>
+            <img src="https://media.tenor.com/DXL84KB6lscAAAAi/confetti-cute.gif" alt="celebrate"/>
         </div>
-        <b style="color:white;font-family: sans-serif">-Sincerely, Eshan</b>
+       <h3 class="color-white">-Future Boyfriend, Eshan</h3>
     </div>
     <!--DIALOG CONTENT-->
     <dialog id="showDialog">
-            <div style="display: flex;justify-content: end">
-                <p class="closeicon" onclick="closeDialog()" style="cursor:pointer; font-size: 30px; text-align: right; display: inline-block">X</p>
+            <div class="dialog-title">
+                <h1>Congratulations!!!</h1><br>
+                <p class="closeicon" onclick="closeDialog()">X</p>
             </div>
-            <div>
-                <h1 style="text-align: center;font-size: 55px"><span style="color: red">YES?!</span> </br>Love you & see u soon</h1>
-                <img src="https://media.tenor.com/uPqAeCeFDkkAAAAi/%E5%B9%B8%E7%A6%8F%E7%88%B1%E5%BF%83-happy.gif" alt="celebrate"/>
-                <img src="https://media.tenor.com/dLyUHPL976UAAAAi/love-in-love.gif" alt="celebrate"/>
+        <h2 class="color-white">I gave you the permission to date me!</h2>
+
+        <div class="text-center">
+                <img src="e.jpg" alt="e" class="eshan-img">
+                <div class="dialog-content">
+                <div class="heartbeats"></div>
+                </div>
+                <h1 class="color-white">Love you & see u soon</h1>
+<!--                <img src="https://media.tenor.com/uPqAeCeFDkkAAAAi/%E5%B9%B8%E7%A6%8F%E7%88%B1%E5%BF%83-happy.gif" alt="celebrate"/>-->
+<!--                <img src="https://media.tenor.com/dLyUHPL976UAAAAi/love-in-love.gif" alt="celebrate"/>-->
             </div>
     </dialog>
 </body>

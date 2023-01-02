@@ -11,8 +11,8 @@ function closeDialog() {
 }
 function showConfetti(){
     dialog.showModal();
-    document.getElementById('confetti-wrapper').style.display = "block";
-    document.getElementById('celebrate').style.display = "block";
+    document.getElementsByClassName('confetti-wrapper')[0].style.display="block";
+    document.getElementsByClassName('celebrate')[0].style.display="block";
 }
 
 
@@ -43,5 +43,5 @@ for(i=0; i<100; i++) {
     confetti.style.obacity=randomScale;
     confetti.style.transform='skew(15deg) rotate(' + randomRotation + 'deg)';
     confetti.style.animationDelay=randomAnimationDelay + 's';
-    document.getElementById("confetti-wrapper").appendChild(confetti);
+    document.getElementsByClassName("confetti-wrapper")[0].appendChild(confetti);
 }
