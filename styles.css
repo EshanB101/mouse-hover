@@ -5,8 +5,25 @@
     font-family: 'Caveat', cursive;
 }
 body{
-    background-image: linear-gradient(to right top, #646ff8, #7f73f6, #9478f3, #a67df1, #b683ef);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    height: 100vh;
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 
 html {
     overflow: hidden;
@@ -69,10 +86,16 @@ button {
 #showDialog {
     margin: 10% auto;
     padding: 32px;
+
+    /* css for Glassmorphism   */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
-dialog::backdrop {
-    background: rgba(0,0,0,0.84);
-}
+
 .closeicon:hover {
     transform: scale(1.1);
 }
