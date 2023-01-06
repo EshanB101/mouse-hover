@@ -106,11 +106,7 @@ button {
     margin: 10% auto;
     padding: 32px;
     width:400px;
-    /* css for Glassmorphism   */
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: #FFFFFF;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -137,13 +133,6 @@ dialog::backdrop {
 
 .dialog-title h1 {
  color:red;
-}
-
-.dialog-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 12px;
 }
 
 .yes-btn {
@@ -252,62 +241,6 @@ dialog::backdrop {
 
 .color-white {
     color: white;
-}
-
-.heartbeats {
-    top: 8%;
-    left: 8%;
-    background-color: #ff4f20;
-    height: 30px;
-    transform: rotate(-45deg);
-    width: 30px;
-    display: block;
-    animation-name: beat;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.heartbeats:before, .heartbeats:after {
-    content: "";
-    background-color: #ff4f20;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-}
-
-.heartbeats:before {
-    top: -16px;
-    left: 0;
-}
-
-.heartbeats:after {
-    left: 16px;
-    top: 0;
-}
-
-@keyframes beat {
-    0% {
-        transform: scale(1) rotate(-45deg);
-    }
-    40% {
-        transform: scale(1) rotate(-45deg);
-    }
-    50% {
-        transform: scale(0.8) rotate(-45deg);
-    }
-    55% {
-        transform: scale(0.9) rotate(-45deg);
-    }
-    60% {
-        transform: scale(0.7) rotate(-45deg);
-    }
-}
-
-.eshan-img {
-    height:300px;
-    margin-bottom: 18px;
-    margin-top: 18px;
 }
 
 .action-button {
