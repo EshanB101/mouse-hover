@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive;
+}
+
+body{
+    background: linear-gradient(-45deg, #646ff8, #7f73f6, #a67df1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+button {
+    padding: 24px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    font-size: 24px;
+    border: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header {
+    display: flex;
+    align-items: center
+}
+
+.container-header h2 {
+    font-size: 6.2vh;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 7.5vh;
+    margin-bottom: 24px;
+}
+
+.container h3 {
+  font-family: sans-serif;
+}
+
+.no-btn {
+    background: #DA291C;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes confettiRain {
+    0% {
+        opacity: 1;
+        margin-top: -100vh;
+        margin-left: -200px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 100vh;
+        margin-left: 200px;
+    }
+}
+
+.confetti {
+    opacity: 0;
+    position: absolute;
+    width: 1rem;
+    height: 1.5rem;
+    transition: 500ms ease;
+    animation: confettiRain 5s infinite;
+    z-index: -32;
+}
+
+#confetti-wrapper {
+    overflow: hidden !important;
+}
+
+#showDialog {
+    margin: 10% auto;
+    padding: 32px;
+    width:400px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,0.30);
+}
+
+.closeicon {
+    cursor:pointer;
+    font-size: 30px;
+    text-align: right;
+    display: inline-block
+}
+
+.closeicon:hover {
+    transform: scale(1.1);
+}
+
+.dialog-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialog-title h1 {
+ color:red;
+}
+
+.yes-btn {
+    color: white;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
+    margin-right: 24px;
+}
+
+.yes-btn:hover {
+    color: #fe2d7c;
+}
+
+.yes-btn:hover .heart, .yes-btn:hover .heart-outer {
+    transform: translate3D(-50%, -50%, 0) rotate(-45deg) scale(12);
+}
+
+.yes-btn-text {
+    color: #fe2d7c;
+    position: relative;
+    z-index: 10;
+}
+
+.heart, .heart-outer {
+    position: absolute;
+    left: 50%;
+    transform: translate3D(-50%, -50%, 0) rotate(-45deg) scale(0);
+    z-index: 5;
+    transition: transform 0.8s cubic-bezier(0.46, 0.01, 0.32, 1);
+}
+
+.heart:before, .heart-outer:before, .heart:after, .heart-outer:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart:before, .heart-outer:before {
+    left: 0;
+}
+
+.heart {
+    background-color: #fff;
+    top: 60%;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    color: #fe2d7c;
+}
+
+.heart:before, .heart:after {
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+}
+
+.heart:before {
+    top: -10px;
+}
+
+.heart-outer {
+    width: 30px;
+    height: 30px;
+    background-color: #ffc0d8;
+    z-index: 1;
+    top: 62%;
+}
+
+.heart-outer:before, .heart-outer:after {
+    width: 30px;
+    height: 30px;
+    background-color: #ffc0d8;
+}
+
+.heart-outer:before {
+    top: -15px;
+}
+
+.display-none {
+    display: none
+}
+
+.text-center {
+    text-align: center;
+}
+
+.celebrate img {
+    position: absolute;
+    z-index: -2;
+}
+
+.celebrate img:first-child {
+    left: 0;
+    top:10%;
+}
+
+.celebrate img:last-child {
+    right: 0;
+    bottom:0;
+}
+
+.color-white {
+    color: white;
+}
+
+.action-button {
+    margin: 24px 197px 64px 32px;
+}
+
+.please-cat {
+    height: 12vh;
+    border-radius: 8px;
+}
